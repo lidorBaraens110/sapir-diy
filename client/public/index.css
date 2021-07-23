@@ -1,0 +1,14 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  /* background-image: linear-gradient(to bottom, #edc3a9, white); */
+  /* background-position: 50%;
+  font-family: "Assistant", sans-serif; */
+}
+
+.sub {
+  font-family: "Dancing Script", cursive;
+  font-weight: 100;
+  font-size: 2rem;
+}
