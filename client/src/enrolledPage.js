@@ -129,7 +129,7 @@ const EnrolledPage = () => {
             //         console.log(error.text);
             //     });
 
-            const { data } = await axios.post('http://localhost:5000/sendMessage', {
+            const { data } = await axios.post(`${process.env.REACT_APP_BACKEND}/sendMessage`, {
                 name: userDetailsTeam.name,
                 phoneNumber: userDetailsTeam.phone,
                 amount: userDetailsTeam.counter
