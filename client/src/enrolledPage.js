@@ -70,7 +70,8 @@ const EnrolledPage = () => {
             //     }, (error) => {
             //         console.log(error.text);
             //     });
-            const { data } = await axios.post('http://localhost:5000/sendMessage', {
+
+            const { data } = await axios.post(`${process.env.REACT_APP_BACKEND}/sendMessage`, {
                 name: userDetails.name,
                 phoneNumber: userDetails.phone,
             })

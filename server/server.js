@@ -14,16 +14,14 @@ app.post('/sendMessage', (req, res) => {
     let message, managerMessage;
     if (amount) {
         managerMessage = `שלום ספיר
-            ${name}
-            נרשמה לסדנא בקבוצות צרי עמה קשר בהקדם טלפון: ${phoneNumber}
+            ${name} נרשמה לסדנא בקבוצות צרי עמה קשר בהקדם טלפון: ${phoneNumber}
             מספר המשתתפים הוא ${amount}`
     } else {
         managerMessage = `שלום ספיר
-    ${name}
-    נרשמה לסדנא אישית טלפון: ${phoneNumber}`
-        message = `שלום ${name}
-        פרטייך התקבלו בהצלחה לתשלום וסיום ההרשמה אצור עמך קשר בהקדם`
+        ${name} נרשמה לסדנא אישית טלפון: ${phoneNumber}`
     }
+    message = `שלום ${name}
+        פרטייך התקבלו בהצלחה לתשלום וסיום ההרשמה אצור עמך קשר בהקדם`
     var clientParams = {
         Message: message,
         PhoneNumber: '+972' + phoneNumber,
