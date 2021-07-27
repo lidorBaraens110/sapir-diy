@@ -18,7 +18,7 @@ const Footer = () => {
                     <FacebookIcon fontSize='large' />
                 </IconButton>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=+972547655011">
+            <a href="https://api.whatsapp.com/send?phone=+972546310022">
                 <IconButton>
                     <WhatsAppIcon fontSize='large' />
                 </IconButton>

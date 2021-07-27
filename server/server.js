@@ -7,6 +7,10 @@ const AWS = require('aws-sdk');
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+    res.send("server is running")
+})
+
 app.post('/sendMessage', (req, res) => {
     console.log('here')
     let sended = { user: false, manager: false }

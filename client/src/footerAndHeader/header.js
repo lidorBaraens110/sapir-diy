@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
+
 const useStyles = makeStyles(theme => ({
     wrap: {
         zIndex: 3,
@@ -30,9 +31,10 @@ const useStyles = makeStyles(theme => ({
     },
     h2: {
         margin: 0
-    }
+    },
 }))
 const Heading = () => {
+
     const classes = useStyles()
 
     return (

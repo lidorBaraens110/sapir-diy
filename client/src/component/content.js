@@ -1,6 +1,36 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
-import { useStyles } from '../styles';
+import { Typography, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles(theme => ({
+    wrapContent: {
+        position: 'relative',
+        marginBottom: '2rem',
+        padding: '0 25%',
+        [theme.breakpoints.down('xs')]: {
+            padding: '0 5%',
+        }
+    },
+    content: {
+        zIndex: 5,
+        color: '#421F00',
+        lineHeight: '2rem',
+        fontWeight: '600',
+        fontSize: '1.3rem',
+        textAlign: 'center',
+        fontFamily: 'Assistant , sans-serif',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1rem',
+        }
+    },
+    strongTyp: {
+        color: 'black',
+        padding: '3rem 25%',
+        textAlign: 'center',
+        fontSize: '1.1rem',
+        fontWeight: 'bolder',
+        fontFamily: 'Assistant , sans-serif'
+    },
+}))
 
 function Content() {
 

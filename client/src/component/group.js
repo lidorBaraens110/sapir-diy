@@ -1,6 +1,32 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
-import { useStyles } from '../styles';
+import { Typography, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles(theme => ({
+    workshopHeader: {
+        padding: '0.5rem 0',
+        marginTop: '2rem',
+        marginBottom: '0',
+        position: 'relative',
+        display: 'inline-block',
+        backgroundColor: 'white',
+        borderRadius: '2rem',
+        fontFamily: 'Montserrat ,sans-serif',
+    },
+    workshopTitle: {
+        margin: 0
+    },
+    workshopContent: {
+        color: 'black',
+        lineHeight: '2rem',
+        fontFamily: 'Assistant , sans-serif',
+        fontWeight: '600',
+        fontSize: '1.1rem',
+        textAlign: 'center',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '0.8rem'
+        }
+    }
+}))
 
 const Group = () => {
     const classes = useStyles()

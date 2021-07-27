@@ -1,11 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { Grid, Card } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Grid, Card, makeStyles } from '@material-ui/core';
 import axios from 'axios';
 import UserDetails from './component/userDetails';
 import OneOnOne from './component/oneOnOne';
 import Group from './component/group';
 import emailjs from 'emailjs-com';
-import { useStyles } from './styles';
+
+
+const useStyles = makeStyles(theme => ({
+    gridContainer: {
+        margin: 0,
+        maxWidth: '100%',
+        position: 'relative'
+    },
+    enrollCard: {
+        margin: '2rem',
+        backgroundColor: 'white',
+        borderRadius: '2rem',
+        [theme.breakpoints.down('xs')]: {
+            margin: '0.5rem'
+        }
+    },
+}))
 
 const personalUser = {
     type: 'אחד על אחד',
@@ -173,7 +189,7 @@ const EnrolledPage = () => {
                     item
                     xs={12} sm={12} md={6} lg={6} xl={6}
                 >
-                    <div className={classes.enrollCard}>
+                    <Card className={classes.enrollCard}>
                         <Group />
                         <UserDetails
                             handleClickPhone={handleClickPhoneGroup}
@@ -189,7 +205,7 @@ const EnrolledPage = () => {
                             name={userDetailsTeam.name}
                             email={userDetailsTeam.email}
                             phone={userDetailsTeam.phone} />
-                    </div>
+                    </Card>
                 </Grid>
             </Grid>
         </div >

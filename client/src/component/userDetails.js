@@ -1,7 +1,56 @@
 import React from 'react';
-import { Button, TextField, List, ListItem, Typography } from '@material-ui/core';
+import { Button, TextField, makeStyles, List, ListItem, Typography } from '@material-ui/core';
 import ParticipantsSelect from './participantsSelect';
-import { useStyles } from '../styles';
+
+const useStyles = makeStyles(theme => ({
+    list: {
+        textAlign: 'center', padding: '1rem 15%',
+        [theme.breakpoints.down('xs')]: {
+            padding: '0.5rem 1rem'
+        }
+    },
+    listItem: {
+        display: 'flex',
+        justifyContent: 'center',
+        color: '#421F00'
+    },
+    price: {
+        fontSize: '1.2rem',
+        fontFamily: 'Assistant , sans-serif',
+        backgroundColor: '#ffe1e6',
+        padding: '1rem',
+        fontWeight: 'bold',
+        borderRadius: '1rem'
+    },
+    participants: {
+        display: 'flex',
+        justifyContent: 'space-between'
+    },
+    total: {
+        fontFamily: 'Assistant , sans-serif',
+        alignSelf: 'flex-end'
+    },
+    error: {
+        color: 'red'
+    },
+    submit: {
+        margin: '2rem',
+        backgroundColor: 'black',
+        color: 'white',
+        border: 'solid #ffecda 2px',
+        // [theme.breakpoints.up('sm')]: {
+        //     '&:hover': {
+        //         borderColor: 'black',
+        //         backgroundColor: 'white',
+        //         color: 'black'
+        //     }
+        // }
+    },
+    submitTyp: {
+        fontFamily: 'Assistant , sans-serif'
+    },
+
+}))
 
 
 const UserDetails = ({ counter, sum, price, handleChangeCurrentParticipant
